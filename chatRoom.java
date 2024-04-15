@@ -10,9 +10,10 @@ public class chatRoom {
         chatServer.registerUser(dan);
         chatServer.registerUser(cole);
         chatServer.registerUser(jordan);
-        chatServer.blockUser(jordan);
 
         jordan.send(jordan, collective, forColeAndDan);
+        cole.recieve(forColeAndDan);
+        dan.recieve(forColeAndDan);
     }
     
 }

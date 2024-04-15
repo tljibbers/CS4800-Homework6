@@ -28,6 +28,6 @@ public class message {
    
     public String getMessageContent()
     {
-        return instant + messageContent;
+        return instant + " " + messageContent;
     }
 }

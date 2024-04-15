@@ -18,10 +18,11 @@ public class user {
         history.addMessage(user, note, chatLog);
     }
 
-    public void recieve(user sender, message note)
+    public void recieve(message note)
     {
-        System.out.println("Message being recieved from " + sender);
+        System.out.println("Message being recieved from " + note.getSender());
         inbox.add(note.getMessageContent());
+        System.out.println(inbox);
     }
 
     public void undo()
