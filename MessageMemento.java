@@ -1,15 +1,15 @@
 public class MessageMemento {
-    private String state;
+    private message state;
 
-    public MessageMemento(String state) {
+    public MessageMemento(message state) {
         this.state = state;
     }
 
     public String getState() {
-        return state;
+        return state.getMessageContent();
     }
 
-    public void setState(String state) {
+    public void setState(message state) {
         this.state = state;
     }
     

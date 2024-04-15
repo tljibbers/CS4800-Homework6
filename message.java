@@ -25,13 +25,9 @@ public class message {
         return recipient;
     }
 
-    public Timestamp getTimestamp()
-    {
-        return instant;
-    }
-    
+   
     public String getMessageContent()
     {
-        return messageContent;
+        return instant + messageContent;
     }
 }
