@@ -5,8 +5,8 @@ public class MessageMemento {
         this.state = state;
     }
 
-    public String getState() {
-        return state.getMessageContent();
+    public message getState() {
+        return state;
     }
 
     public void setState(message state) {
