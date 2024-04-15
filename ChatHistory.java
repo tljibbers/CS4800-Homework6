@@ -5,7 +5,7 @@ public class ChatHistory {
     
     HashMap<user, String> chatLog = new HashMap<user, String>();
 
-    public void addMessage(user name, message message)
+    public void addMessage(user name, message message, HashMap<user, String> chatLog)
     {
         chatLog.put(name, message.getMessageContent());
     }

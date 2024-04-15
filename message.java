@@ -2,11 +2,11 @@ import java.sql.Timestamp;
 import java.time.Instant;
 public class message {
     private String sender;
-    private String[] recipient;
+    private String recipient;
     Timestamp instant;
     private String messageContent;
 
-    public message(String sender, String[] recipient, String messageContent)
+    public message(String sender, String recipient, String messageContent)
     {
         this.sender = sender;
         this.recipient = recipient;
@@ -20,7 +20,7 @@ public class message {
         return sender;
     }
 
-    public String[] getRecipient()
+    public String getRecipient()
     {
         return recipient;
     }

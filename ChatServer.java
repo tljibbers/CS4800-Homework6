@@ -16,17 +16,17 @@ public class ChatServer {
         user.isBlocked = true;
     }
 
-    public message send(user user, user[] recipients, message note)
+    public message sendMessage(user user, user[] recipients, message note)
     {
-        if(user.isBlocked || (user.isRegistered == false))
+        if(user.isRegistered == false)
         {
-            System.out.println("Cannot send message. Either a recipient has blocked you or you are not registered");
+            System.out.println("User is not registered to send messages. Register to be able to.");
+           
         }
-        else
+        if(user.isBlocked == true)
         {
-            return note;
+            System.out.println("A user has blocked you from sending a message.");
         }
-
-        return null;
+        return note;
     }
 }
