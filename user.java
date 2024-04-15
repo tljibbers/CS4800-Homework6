@@ -1,15 +1,15 @@
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class user {
 
+    Boolean isRegistered;
+    Boolean isBlocked;
+    ChatServer chat = new ChatServer();
     ArrayList<String> inbox = new ArrayList<String>();
 
-    public message send(user[] recipient, message note)
+    public void send(user user, user[] recipients, message note)
     {
-        Scanner messageContent = new Scanner(System.in);
-        System.out.println("Message being sent to " + recipient);
-        return note;
+        chat.send(user, recipients, note);
     }
 
     public void recieve(user sender, message note)
@@ -17,5 +17,7 @@ public class user {
         System.out.println("Message being recieved from " + sender);
         inbox.add(note.getMessageContent());
     }
+
+  
     
 }
