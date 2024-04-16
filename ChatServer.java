@@ -4,11 +4,13 @@ public class ChatServer {
     public void registerUser(user user)
     {
         user.isRegistered = true;
+        System.out.println(user + " has registered.");
     }
 
     public void unRegisterUser(user user)
     {
         user.isRegistered = false;
+        System.out.println(user + " has unregistered.");
     }
 
     public void blockUser(user user, user blocker)
