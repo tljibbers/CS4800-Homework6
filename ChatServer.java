@@ -11,9 +11,10 @@ public class ChatServer {
         user.isRegistered = false;
     }
 
-    public void blockUser(user user)
+    public void blockUser(user user, user blocker)
     {
         user.isBlocked = true;
+        System.out.println(user + " has been blocked by " + blocker);
     }
 
     public message sendMessage(user user, user[] recipients, message note)

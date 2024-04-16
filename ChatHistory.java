@@ -1,7 +1,8 @@
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
-public class ChatHistory {
+public class ChatHistory implements IterableByUser{
     
     HashMap<user, String> chatLog = new HashMap<user, String>();
 
@@ -22,5 +23,18 @@ public class ChatHistory {
             }
             count++;
         }
+    }
+
+    public Iterator<message> iterator(user userToSearchWith)
+    {
+        for (Map.Entry<user, String> iterator : chatLog.entrySet())
+        {
+            if (userToSearchWith == iterator.getKey())
+            {
+                System.out.println(iterator.getKey() + iterator.getValue());
+            }
+        }
+
+        return null;
     }
 }

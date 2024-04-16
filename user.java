@@ -1,7 +1,8 @@
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 
-public class user {
+public class user implements IterableByUser{
 
     Boolean isRegistered = false;
     Boolean isBlocked = false;
@@ -28,6 +29,17 @@ public class user {
     public void undo()
     {
         note = memento.getState();
+    }
+
+    public void checkHistory()
+    {
+        history.getLastMessageSent(chatLog);
+    }
+
+    @Override
+    public Iterator<message> iterator(user userToSearchWith) {
+        history.iterator(userToSearchWith);
+        return null;
     }
 
   
